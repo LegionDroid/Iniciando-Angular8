@@ -1,0 +1,15 @@
+<p>ngif-ngfor works!</p>
+
+<h1 *ngIf="true">Testando o ng-if true</h1>
+<h1 *ngIf="false">Testando o ng-if false</h1>
+<h1 *ngIf="metodoQueRetornaTrue()">Verrificando uma condição com metodo que sempre retorna true</h1>
+
+
+<input type="text" (input)="numero = $event.target.value">
+
+<h1 *ngIf="numero == 1">input é igual a 1</h1>
+<h1 *ngIf="numero != 1">input é diferente de 1</h1>
+
+<h1 *ngIf="verificaSeNumeroMaior5()"> input é maior que 5</h1>
+<h1 *ngIf="!verificaSeNumeroMaior5()">input é menor que 5</h1>
+
