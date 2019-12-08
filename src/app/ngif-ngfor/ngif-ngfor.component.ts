@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class NgifNgforComponent implements OnInit {
 
   numero: number;
+  arrayNumeros = [1,2,3,4,5];
 
   constructor() { }
 

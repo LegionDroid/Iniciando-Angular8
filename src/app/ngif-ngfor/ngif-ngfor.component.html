@@ -1,15 +1,22 @@
-<p>ngif-ngfor works!</p>
+<h3>Testando ngIf</h3>
 
-<h1 *ngIf="true">Testando o ng-if true</h1>
-<h1 *ngIf="false">Testando o ng-if false</h1>
-<h1 *ngIf="metodoQueRetornaTrue()">Verrificando uma condição com metodo que sempre retorna true</h1>
+<p *ngIf="true">Testando o ng-if true</p>
+<p *ngIf="false">Testando o ng-if false</p>
+<p *ngIf="metodoQueRetornaTrue()">Verrificando uma condição com metodo que sempre retorna true</p>
 
 
 <input type="text" (input)="numero = $event.target.value">
 
-<h1 *ngIf="numero == 1">input é igual a 1</h1>
-<h1 *ngIf="numero != 1">input é diferente de 1</h1>
+<p *ngIf="numero == 1">input é igual a 1</p>
+<p *ngIf="numero != 1">input é diferente de 1</p>
 
-<h1 *ngIf="verificaSeNumeroMaior5()"> input é maior que 5</h1>
-<h1 *ngIf="!verificaSeNumeroMaior5()">input é menor que 5</h1>
+<p *ngIf="verificaSeNumeroMaior5()"> input é maior que 5</p>
+<p *ngIf="!verificaSeNumeroMaior5()">input é menor que 5</p>
+
+<h3>Testando ngFor e o ngIf dentro do for(retirando o numero 3)</h3>
+<div *ngFor="let numero of arrayNumeros">
+    <p *ngIf="numero != 3">{{numero}}</p>
+</div>
+
+
 
