@@ -1,2 +1,20 @@
 <h1>Primeiro Componente</h1>
 <p>data-binding works!</p>
+
+<div>
+    Input
+    <input type="text" (input)="this.numero = $event.target.value" />
+    {{numero}}
+</div>
+
+<div class="mt-5">
+    <span>Change - Via Metodo</span>
+    <input type="text" (change)="obtemNumero($event.target.value)" />
+    <span>{{numeroChange}}</span>
+</div>
+
+<div class="mt-5">
+    <span>Blur</span>
+    <input type="text" (blur)="this.numeroBlur = $event.target.value" />
+    <span>{{numeroBlur}}</span>
+</div>
